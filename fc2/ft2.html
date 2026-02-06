@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+
+<body class="bg-white text-dark">
+    <div class="container my-5 p-4 border rounded shadow-sm">
+
+        <h2 class="pb-2 border-bottom">What is Future Chain?</h2>
+        <p>
+            A Futures Chain displays real-time data of index or stock futures contracts across different expiries.
+            It helps traders understand how futures participants are positioned, whether positions are being built,
+            reduced, or rolled over, and what the market expects from the underlying index.
+        </p>
+
+        <h3 class="pb-2 border-bottom">Why Do We Use the Future Chain?</h3>
+        <p>
+            Futures data reflects the activity of institutional and professional traders.
+            By analyzing price, open interest, and volume together, traders can identify
+            trend strength, direction, and conviction behind market moves.
+        </p>
+
+        <div class="text-center my-4">
+            <img src="C:\Users\hp\Desktop\write-up-project2\images\Screenshot 2026-02-05 140430.png"
+                class="img-fluid img-thumbnail" alt="error loading image">
+        </div>
+
+        <h3 class="pb-2 border-bottom">Breaking Down the Future Data</h3>
+        <p>
+            The Futures Chain shows Nifty 50 index futures data for multiple expiries
+            (Near, Next, and Far month) with continuous updates during market hours.
+        </p>
+
+        <h3 class="pb-2 border-bottom">Column Explanation</h3>
+
+        <h4 class="pb-2">Expiry</h4>
+        <p>
+            The date on which the future contract expires. Traders typically focus more on
+            the near-month expiry due to higher liquidity.
+        </p>
+
+        <h4 class="pb-2">Futures LTP</h4>
+        <p>
+            The last traded price of the futures contract.
+            It often trades at a premium or discount compared to the spot index
+            depending on market sentiment and cost of carry.
+        </p>
+
+        <h4 class="pb-2">Change (%)</h4>
+        <p>
+            Shows how much the futures price has moved compared to the previous close.
+            A strong positive change with rising open interest suggests aggressive long buildup.
+        </p>
+
+        <h4 class="pb-2">Open Interest (OI)</h4>
+        <p>
+            Open Interest represents the total number of outstanding futures contracts.
+            Rising OI with price increase confirms trend strength, while falling OI indicates position unwinding.
+        </p>
+
+
+        <h3 class="pb2 border-bottom">rollover cost</h3>
+        <p>Rollover cost in the futures chain is the expense incurred when carrying a trading position from the current
+            expiring month to the next month. It represents the price difference (spread) between the expiring contract
+            and the new contract, often including transaction costs like brokerage and taxes. It reflects market
+            conviction
+        <h4>key aspects</h4>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h6>Cost of Carry & Demand:</h6> The price difference arises from the "cost of carry"
+                (interest rates, storage, dividends) and the demand/supply of the contract.
+            </li>
+            <li class="list-group-item">
+                <h6>Types of Roll:</h6>h6 A "long roll" occurs when a trader buys the next month's contract
+                while selling the current one. A "short roll" involves selling the next month's contract while buying
+                back the current one.
+            </li>
+            <li class="list-group-item">
+                <h6>Example:</h6> If August futures are sold at ₹1,480 and September futures are bought
+                at ₹1,490, the cost of rolling over the position is ₹10 per unit, plus associated taxes and brokerage
+                fees.
+            </li>
+
+        </ul>
+        </p>
+        <h3>rollover%</h3>
+        <p>Rollover percentage in a futures chain measures the proportion of open interest (OI) transferred from the
+            expiring near-month contract to the next-month contract, indicating market conviction. A high percentage
+            suggests bullish sentiment and strong trend continuation, while low percentages may signal reduced
+            conviction.
+        <h3>key aspects</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h6>Definition:</h6> The process of closing a position in the near-month contract and
+                simultaneously opening it in the next month to maintain exposure.
+            </li>
+            <li class="list-group-item">
+                <h6>Interpretation:</h6> High rollover (often compared to a 3-month average) signifies
+                that traders are willing to pay the cost to maintain their positions, often signaling strong market
+                trends.
+            </li>
+            <li class="list-group-item"><h6>Timing:</h6> Rollovers usually intensify in the days leading up to the monthly expiry
+            </li>
+            <li class="list-group-item"><h6>Cost:</h6> The rollover cost, or basis, is the difference between the next series
+                price and the current series price.</li>
+            <li class="list-group-item"><h6>Significance:</h6> It helps traders, particularly in index futures, understand market
+                direction and avoid physical delivery of stock futures. </li>
+        </ul>
+        </p>
+        <h4 class="pb-2">Change in OI</h4>
+        <p>
+            Indicates whether new positions are being added or old positions are being closed.
+        </p>
+
+        <ul>
+            <li><strong>Price ↑ + OI ↑:</strong> Long buildup (bullish)</li>
+            <li><strong>Price ↓ + OI ↑:</strong> Short buildup (bearish)</li>
+            <li><strong>Price ↑ + OI ↓:</strong> Short covering</li>
+            <li><strong>Price ↓ + OI ↓:</strong> Long unwinding</li>
+        </ul>
+        <h3 class="pb-2 border-bottom">Sample Futures Chain Snapshot</h3>
+        <table class="table table-bordered table-striped">
+            <thead class="table-light">
+                <tr>
+                    <th>Expiry</th>
+                    <th>Futures LTP</th>
+                    <th>Change</th>
+                    <th>Open Interest</th>
+                    <th>OI Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>26 DEC 2025</td>
+                    <td>26,045.50</td>
+                    <td class="text-success">+0.42%</td>
+                    <td>1,25,000</td>
+                    <td class="text-success">+8,500</td>
+                </tr>
+                <tr>
+                    <td>30 JAN 2026</td>
+                    <td>26,110.20</td>
+                    <td class="text-success">+0.38%</td>
+                    <td>65,400</td>
+                    <td class="text-success">+3,200</td>
+                </tr>
+                <tr>
+                    <td>27 FEB 2026</td>
+                    <td>26,185.00</td>
+                    <td class="text-success">+0.31%</td>
+                    <td>28,900</td>
+                    <td class="text-danger">-1,100</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="pb-2 border-bottom">Trading Insight</h3>
+        <p> In the above example, near-month futures show rising price along with rising open interest, indicating fresh
+            long positions and strong bullish participation. Far-month contracts showing lower OI change suggest limited
+            positional activity. </p>
+        <h3 class="pb-2 border-bottom">Why Futures Chain Matters More Than Options Alone</h3>
+        <p> Futures represent directional bets with real money commitment. While options can reflect hedging or
+            speculation, futures data provides a clearer picture of trend strength and institutional bias. </p>
+    </div>
+
+</body>
+
+</html>
+
