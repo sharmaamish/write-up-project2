@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Future Intraday Analysis – Explained</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container my-4">
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h1 class="card-title">Future Intraday Analysis</h1>
+                <p class="text-muted mb-0">
+                    A structured approach to analyze price, volume, and open interest behavior in futures during the
+                    trading session.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">What is Future Intraday Analysis?</h4>
+                <p>
+                    Future Intraday Analysis focuses on understanding <strong>real-time market behavior</strong> of
+                    futures contracts
+                    by tracking price movement, volume, and open interest (OI) changes throughout the trading day.
+                </p>
+                <p class="mb-0">
+                    It helps traders identify <strong>trend strength, smart money activity, and intraday bias</strong>
+                    for quick decision-making.
+                </p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Price, Volume & OI Interpretation</h4>
+
+
+                <div class="text-center mb-3">
+
+                    <img src="C:\Users\hp\Desktop\write-up-project2\FIA2\images3\Screenshot 2026-02-08 223230.png"
+                        class="img-fluid rounded shadow-sm" alt="Intraday futures data table">
+                </div>
+
+                <p class="mb-3">
+                    This table shows real-time intraday futures data at different time intervals.
+                    It helps traders understand how price, volume and open interest are changing minute by minute.
+                </p>
+
+                <ul>
+                    <li><strong>Time:</strong> Exact time of each data update.</li>
+                    <li><strong>LTP (Last Traded Price):</strong> Current market price at that time.</li>
+                    <li><strong>Δ LTP:</strong> How much price moved from the previous value.</li>
+                    <li><strong>OI (Open Interest):</strong> Shows whether new positions are being added or removed.
+                    </li>
+                    <li><strong>Volume:</strong> Number of contracts traded in that period.</li>
+                    <li>
+                        <strong>Built Up:</strong>
+                        L = Long Build-up (bullish),
+                        S = Short Build-up (bearish),
+                        SC = Short Covering (temporary upside)
+                    </li>
+                </ul>
+
+                <p>
+                    When price and OI both increase, it means new buyers are entering (bullish).
+                    When price falls but OI increases, it means new sellers are entering (bearish).
+                </p>
+
+                <hr>
+
+                <h5 class="section-title">Intraday Price Movement Chart</h5>
+
+
+                <div class="text-center mb-3">
+
+                    <img src="C:\Users\hp\Desktop\write-up-project2\FIA2\images3\Screenshot 2026-02-08 223256.png"
+                        class="img-fluid rounded shadow-sm" alt="Price change vs price chart">
+                </div>
+
+                <p>
+                    This chart visually shows how price moved throughout the day.
+                </p>
+                <ul>
+                    <li><strong>Horizontal axis (bottom):</strong> Time of the day.</li>
+                    <li><strong>Right vertical axis:</strong> Actual futures price.</li>
+                    <li><strong>Orange line:</strong> Price change movement over time.</li>
+                </ul>
+
+                <p>
+                    If the line is going up continuously, it indicates strong buying pressure.
+                    If it is going down, it shows selling pressure.
+                    Sharp jumps or drops usually happen when volume and OI increase suddenly,
+                    which often signals smart money activity.
+                </p>
+
+                <p class="mb-0">
+                    By combining the table data and this chart, traders can quickly see
+                    both the numeric changes and the visual trend of the market in real time.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Price, Volume & OI Inter-relation</h4>
+                <div class="text-center mb-3">
+                    <img src="C:\Users\hp\Desktop\write-up-project2\FIA2\images3\Screenshot 2026-02-08 223230.png"
+                        class="img-fluid rounded shadow-sm" alt="Intraday futures data example">
+                </div>
+
+                <p class="mb-3">
+                    In future intraday charts, the relationship between Time, Last Traded Price (LTP), Change in LTP,
+                    Open Interest (OI), and Volume is used to determine the strength of a price movement, identify
+                    trader sentiment, and confirm potential breakouts or reversals.The chart also shows real-time
+                    intraday futures data with columns for
+                    <strong>Time, Last Traded Price (LTP), change in LTP, Open Interest (OI), Volume,</strong>
+                    and the derived <strong>Built-up</strong> signal.
+                <h5>
+                    <storng>INTER-RELATION</storng>
+                </h5>
+                <P><h6>Time:</h6> The timestamp of price/activity (e.g., 5-minute candles), crucial for spotting momentum
+                    changes.
+                
+                <h6>LTP & Change in LTP:</h6> The most recent price and its movement from the previous close, indicating
+                    immediate direction.
+                   <h6> Volume:</h6>Total contracts traded within a specific time interval, representing current activity level.
+                   <h6>OI (Open Interest):</h6> Total outstanding contracts that have not been settled. Increasing OI means new
+                    money is entering; decreasing OI means money is leaving. </P>
+                </p>
+
+                <ul>
+                    <li><strong>LTP:</strong> Current traded price at that specific time.</li>
+                    <li><strong>Δ LTP (Day):</strong> Net price and percentage change from previous data.</li>
+                    <li><strong>OI:</strong> Increase or decrease in open positions (new positions vs closing).</li>
+                    <li><strong>Volume:</strong> Number of contracts traded in that interval.</li>
+                    <li>
+                        <strong>Built Up Signal:</strong>
+                        <span class="badge bg-success">L</span> = Long Build-up,
+                        <span class="badge bg-danger">S</span> = Short Build-up,
+                        <span class="badge bg-secondary">SC</span> = Short Covering
+                    </li>
+                </ul>
+
+                <p>
+                    By comparing how price, OI, and volume change together at each timestamp,
+                    traders can quickly detect whether fresh bullish or bearish positions are being added,
+                    or if existing positions are getting unwound.
+                </p>
+
+
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Key Components of Intraday Futures Analysis</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Component</th>
+                                <th>What It Indicates</th>
+                                <th>Trader Insight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Price Movement</strong></td>
+                                <td>Direction and volatility of the future</td>
+                                <td>Trend identification (uptrend / downtrend)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Volume</strong></td>
+                                <td>Market participation strength</td>
+                                <td>Confirms or weakens price move</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Open Interest (OI)</strong></td>
+                                <td>Fresh positions entering or exiting</td>
+                                <td>Smart money activity detection</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VWAP</strong></td>
+                                <td>Average traded price with volume</td>
+                                <td>Intraday support & resistance</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Price, Volume & OI Interpretation</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>OI</th>
+                                <th>Market Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>↑</td>
+                                <td>↑</td>
+                                <td>↑</td>
+                                <td>
+                                    <span class="badge badge-bullish">Long Build-up</span><br>
+                                    Strong bullish sentiment
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>↓</td>
+                                <td>↑</td>
+                                <td>↑</td>
+                                <td>
+                                    <span class="badge badge-bearish">Short Build-up</span><br>
+                                    Strong bearish sentiment
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>↑</td>
+                                <td>↓</td>
+                                <td>↓</td>
+                                <td>
+                                    <span class="badge badge-neutral">Short Covering</span><br>
+                                    Temporary upside move
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>↓</td>
+                                <td>↓</td>
+                                <td>↓</td>
+                                <td>
+                                    <span class="badge badge-neutral">Long Unwinding</span><br>
+                                    Weakness in trend
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Determining Intraday Trading Bias</h4>
+                <ul>
+                    <li>
+                        <strong>Bullish Bias:</strong> Price above VWAP + Rising OI + High volume
+                    </li>
+                    <li>
+                        <strong>Bearish Bias:</strong> Price below VWAP + Rising OI + Selling pressure
+                    </li>
+                    <li>
+                        <strong>Neutral Bias:</strong> Price oscillating around VWAP with low OI change
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Market Sentiment Explained</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Market Type</th>
+                                <th>Who is in Control?</th>
+                                <th>Data Behaviour</th>
+                                <th>Meaning for Traders</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge bg-success fs-6">Bullish</span>
+                                </td>
+                                <td>Buyers</td>
+                                <td>
+                                    Price ↑ <br>
+                                    OI ↑ <br>
+                                    Volume ↑ <br>
+                                    Price above VWAP
+                                </td>
+                                <td>
+                                    New long positions are being added.<br>
+                                    Expect upward trend continuation.<br>
+                                    Prefer buying on dips.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="badge bg-danger fs-6">Bearish</span>
+                                </td>
+                                <td>Sellers</td>
+                                <td>
+                                    Price ↓ <br>
+                                    OI ↑ <br>
+                                    Volume ↑ <br>
+                                    Price below VWAP
+                                </td>
+                                <td>
+                                    New short positions are being added.<br>
+                                    Expect downward trend continuation.<br>
+                                    Prefer selling on rise.
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <span class="badge bg-secondary fs-6">Neutral</span>
+                                </td>
+                                <td>No clear control</td>
+                                <td>
+                                    Price sideways around VWAP <br>
+                                    OI ↓ or very small change <br>
+                                    Low/average volume
+                                </td>
+                                <td>
+                                    Positions are being closed, not newly created.<br>
+                                    Market is range-bound.<br>
+                                    Better to wait for clear breakout.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="mt-3 mb-0">
+                    In simple terms: <strong>Bullish = buy strength</strong>,
+                    <strong>Bearish = sell strength</strong>,
+                    and <strong>Neutral = wait and watch</strong> until either buyers or sellers take clear control.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="section-title">Why Future Intraday Analysis is Important</h4>
+                <p>
+                    Intraday futures analysis allows traders to:
+                </p>
+                <ul class="mb-0">
+                    <li>Identify early trend formation</li>
+                    <li>Track institutional activity via OI changes</li>
+                    <li>Avoid false breakouts using volume confirmation</li>
+                    <li>Improve risk-reward by aligning with intraday bias</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4 class="section-title">Conclusion</h4>
+                <p class="mb-0">
+                    Future Intraday Analysis combines <strong>price action, volume behavior, and open interest
+                        data</strong>
+                    to provide a high-probability trading framework. When used correctly, it enhances decision-making,
+                    reduces emotional trading, and aligns traders with real market strength.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h4 class="section-title">Price Movement</h4>
+            <p class="mb-0">
+                Price movement represents the real-time direction and volatility of a futures contract during the
+                trading session.
+                In intraday trading, price action is the <strong>primary indicator</strong> that reflects market
+                sentiment and
+                immediate supply–demand dynamics.
+            </p>
+            <ul>
+                <li><strong>Higher highs & higher lows:</strong> Indicates bullish intraday momentum</li>
+                <li><strong>Lower highs & lower lows:</strong> Indicates bearish intraday momentum</li>
+                <li><strong>Sideways movement:</strong> Suggests consolidation or lack of strong participation</li>
+            </ul>
+
+            <hr>
+
+
+
+            <h5 class="section-title">Volume</h5>
+            <p class="mb-0">
+                Volume shows the total number of contracts traded during a specific period. It measures
+                <strong>market participation and conviction</strong> behind a price move.
+            </p>
+            <ul>
+                <li><strong>Rising price + rising volume:</strong> Strong and healthy trend</li>
+                <li><strong>Rising price + falling volume:</strong> Weak or temporary move</li>
+                <li><strong>Sudden volume spike:</strong> Institutional or smart money activity</li>
+            </ul>
+
+            <hr>
+
+
+            <h5 class="section-title">Open Interest</h5>
+            <p class="mb-0">
+                Open Interest (OI) represents the total number of outstanding futures contracts that are currently
+                open.
+                Unlike volume, OI helps identify whether <strong>new positions are being created or existing ones
+                    are being closed</strong>.
+            </p>
+            <ul>
+                <li><strong>Price ↑ + OI ↑:</strong> Long build-up (bullish)</li>
+                <li><strong>Price ↓ + OI ↑:</strong> Short build-up (bearish)</li>
+                <li><strong>Price ↑ + OI ↓:</strong> Short covering</li>
+                <li><strong>Price ↓ + OI ↓:</strong> Long unwinding</li>
+            </ul>
+
+            <hr>
+
+
+
+            <h5 class="section-title">VWAP (Volume Weighted Average Price)</h5>
+            <p class="mb-0">
+                VWAP is the average price of a futures contract weighted by volume throughout the trading session.
+                It acts as a <strong>dynamic intraday benchmark</strong> used by institutional traders.
+            </p>
+            <ul>
+                <li><strong>Price above VWAP:</strong> Bullish intraday bias</li>
+                <li><strong>Price below VWAP:</strong> Bearish intraday bias</li>
+                <li><strong>VWAP as support/resistance:</strong> High-probability entry zones</li>
+            </ul>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
